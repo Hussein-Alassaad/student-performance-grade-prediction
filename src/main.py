@@ -36,3 +36,11 @@ plt.ylabel("Final Grade (G3)")
 
 plt.show()
 
+
+plt.scatter(df["G1"], df["G3"])
+plt.title("G1 vs G3")
+plt.xlabel("G1")
+plt.ylabel("G3")
+plt.show()
+
+print(df.corr(numeric_only=True)["G3"].sort_values(ascending=False))
