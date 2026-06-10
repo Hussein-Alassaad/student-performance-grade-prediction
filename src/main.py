@@ -68,6 +68,12 @@ print("Testing features shape:", X_test.shape)
 print("Training target shape:", y_train.shape)
 print("Testing target shape:", y_test.shape)
 
+ml = LinearRegression() # create the model 
+
+ml.fit(X_train, y_train)
+
+
+
 
 
 
