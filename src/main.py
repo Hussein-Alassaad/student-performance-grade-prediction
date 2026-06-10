@@ -63,6 +63,11 @@ X_train, X_test, y_train, y_test = train_test_split(
     random_state=42
 )
 
+print("Training features shape:", X_train.shape)
+print("Testing features shape:", X_test.shape)
+print("Training target shape:", y_train.shape)
+print("Testing target shape:", y_test.shape)
+
 
 
 
