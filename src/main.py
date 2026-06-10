@@ -3,44 +3,57 @@ import matplotlib.pyplot as plt
 
 df = pd.read_csv("Data/student_performance.csv", sep=";")
 
-print(df.head())
-print(df.shape)
-print(df.columns)
-print(df.info())
-print(df["G3"].describe())
+# print(df.head())
+#print(df.shape)
+#print(df.columns)
+#print(df.info())
+#print(df["G3"].describe())
 
 
 
-plt.hist(df["G3"], bins = 20 )
-plt.title("Distribution of Final Grades")
-plt.xlabel("G3")
-plt.ylabel("final grade")
-plt.show()
+#plt.hist(df["G3"], bins = 20 )
+#plt.title("Distribution of Final Grades")
+#plt.xlabel("G3")
+#plt.ylabel("final grade")
+#plt.show()
 
 
 
 
-plt.scatter(df["studytime"], df["G3"])
+#plt.scatter(df["studytime"], df["G3"])
 
-plt.title("Study Time vs Final Grade")
-plt.xlabel("Study Time")
-plt.ylabel("Number of Students")
-plt.show()
+#plt.title("Study Time vs Final Grade")
+#plt.xlabel("Study Time")
+#plt.ylabel("Number of Students")
+#plt.show()
 
-plt.scatter(df["G2"], df["G3"])
-
-
-plt.title("G2 vs Final Grade")
-plt.xlabel("G2")
-plt.ylabel("Final Grade (G3)")
-
-plt.show()
+#plt.scatter(df["G2"], df["G3"])
 
 
-plt.scatter(df["G1"], df["G3"])
-plt.title("G1 vs G3")
-plt.xlabel("G1")
-plt.ylabel("G3")
-plt.show()
+#plt.title("G2 vs Final Grade")
+#plt.xlabel("G2")
+#plt.ylabel("Final Grade (G3)")
+
+#plt.show()
+
+
+#plt.scatter(df["G1"], df["G3"])
+#plt.title("G1 vs G3")
+#plt.xlabel("G1")
+#plt.ylabel("G3")
+#plt.show()
 
 print(df.corr(numeric_only=True)["G3"].sort_values(ascending=False))
+
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+
+from sklearn.metrics import mean_absolute_error
+from sklearn.metrics import r2_score
+
+x = df[["G1" , "G2"]]
+y = df["G3"]
+
+
+
+
