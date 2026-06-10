@@ -53,7 +53,8 @@ from sklearn.metrics import r2_score
 
 x = df[["G1" , "G2"]]
 y = df["G3"]
-
+print(x.head())
+print(y.head())
 
 
 
