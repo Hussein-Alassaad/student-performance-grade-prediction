@@ -78,6 +78,9 @@ print(y_pred[:5])
 print(y_test[:5])
 print(y_pred[:5])
 
+mae = mean_absolute_error(y_test, y_pred)
+print(mae)
+
 
 
 
