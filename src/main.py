@@ -75,6 +75,9 @@ ml.fit(X_train, y_train)
 y_pred = ml.predict(X_test)
 print(y_pred[:5])
 
+print(y_test[:5])
+print(y_pred[:5])
+
 
 
 
