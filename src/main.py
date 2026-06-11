@@ -81,6 +81,9 @@ print(y_pred[:5])
 mae = mean_absolute_error(y_test, y_pred)
 print(mae)
 
+r2 = r2_score(y_test, y_pred)
+print(r2)
+
 
 
 
